@@ -1,0 +1,47 @@
+.dialogue-box {
+  position: absolute;
+  z-index: 10;
+  right: 7%;
+  bottom: 6%;
+  left: 7%;
+  min-height: 24%;
+  padding: clamp(1rem, 3vw, 2rem) clamp(1.2rem, 4vw, 3rem);
+  border: 1px solid #716a5e;
+  background: rgb(19 18 16 / 91%);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 18%);
+  cursor: pointer;
+}
+
+.dialogue-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+}
+
+.dialogue-text.is-muted {
+  color: #d1ccc2;
+}
+
+.dialogue-text.is-fragmented {
+  color: #c3bdb2;
+  filter: blur(0.45px);
+  text-shadow: 1px 0 rgb(164 147 120 / 30%), -1px 0 rgb(255 255 255 / 8%);
+}
+
+.dialogue-prompt {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  color: #8f897f;
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.58rem, 1vw, 0.72rem);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.dialogue-prompt.is-visible {
+  opacity: 1;
+}

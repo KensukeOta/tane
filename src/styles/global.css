@@ -1,0 +1,74 @@
+:root {
+  color-scheme: dark;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --bg: #11100e;
+  --surface: #1c1a17;
+  --surface-soft: #25221e;
+  --text: #f0ede5;
+  --muted: #aaa398;
+  --border: #655f55;
+  --warm: #aa8f68;
+  --soil: #33261c;
+  --focus: #e1c99f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #090908;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+button {
+  color: inherit;
+}
+
+#app {
+  position: relative;
+  width: min(1280px, 100vw, calc(100vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  max-height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: 0 0 64px rgb(0 0 0 / 55%);
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
