@@ -2,6 +2,7 @@ import { Game } from './game/Game';
 import './styles/global.css';
 import './styles/game.css';
 import './styles/dialogue.css';
+import './styles/chapter1.css';
 
 const app = document.querySelector<HTMLElement>('#app');
 

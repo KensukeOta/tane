@@ -1,6 +1,12 @@
 import type { SettingsManager } from './SettingsManager';
 
-type SoundId = 'seed-drop';
+export type SoundId =
+  | 'seed-drop'
+  | 'soccer-kick'
+  | 'soccer-goal'
+  | 'comparison-add'
+  | 'choice-click'
+  | 'applause';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();

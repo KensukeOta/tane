@@ -3,7 +3,8 @@ import { InputManager } from './InputManager';
 import { SaveManager } from './SaveManager';
 import { SceneManager } from './SceneManager';
 import { SettingsManager } from './SettingsManager';
-import { Chapter1PlaceholderScene } from './scenes/Chapter1PlaceholderScene';
+import { Chapter1Scene } from './scenes/Chapter1Scene';
+import { Chapter2PlaceholderScene } from './scenes/Chapter2PlaceholderScene';
 import { ContentNoteScene } from './scenes/ContentNoteScene';
 import { PrologueScene } from './scenes/PrologueScene';
 import { TitleScene } from './scenes/TitleScene';
@@ -37,7 +38,11 @@ export class Game {
     this.sceneManager.register('prologue', (sceneContext) => new PrologueScene(sceneContext));
     this.sceneManager.register(
       'chapter1-start',
-      (sceneContext) => new Chapter1PlaceholderScene(sceneContext),
+      (sceneContext) => new Chapter1Scene(sceneContext),
+    );
+    this.sceneManager.register(
+      'chapter2-start',
+      (sceneContext) => new Chapter2PlaceholderScene(sceneContext),
     );
   }
 
