@@ -3,7 +3,13 @@ import { ComparisonSystem, type ComparisonItem } from '../systems/ComparisonSyst
 import { RootSystem } from '../systems/RootSystem';
 import type { Scene, SceneContext } from '../types';
 import { ChoiceMenu } from '../ui/ChoiceMenu';
-import { createScene, prefersReducedMotion, wait } from './sceneUtils';
+import {
+  createChapterCard,
+  createScene,
+  motionDuration,
+  showCinematicLines,
+  wait,
+} from './sceneUtils';
 
 type MiddleSchoolChoice = 'continue' | 'quit';
 
@@ -16,7 +22,6 @@ export class Chapter1Scene implements Scene {
   private readonly rootSystem: RootSystem;
   private soccerGame: SoccerMiniGame | null = null;
   private choiceMenu: ChoiceMenu | null = null;
-  private removeAdvanceListeners: (() => void) | null = null;
 
   public constructor(private readonly context: SceneContext) {
     this.comparisonSystem = new ComparisonSystem(context.getState);
@@ -33,7 +38,6 @@ export class Chapter1Scene implements Scene {
 
   public exit(): void {
     this.abortController.abort();
-    this.removeAdvanceListeners?.();
     this.soccerGame?.destroy();
     this.choiceMenu?.destroy();
     this.comparisonSystem.destroy();
@@ -397,51 +401,16 @@ export class Chapter1Scene implements Scene {
     className: string,
     displayDuration = this.duration(2100, 450),
   ): Promise<boolean> {
-    return this.runCinematicLines(lines, className, displayDuration);
-  }
-
-  private async runCinematicLines(
-    lines: readonly string[],
-    className: string,
-    displayDuration: number,
-  ): Promise<boolean> {
-    const scene = createScene(`chapter-cinematic-scene ${className}`);
-    const text = document.createElement('p');
-    text.className = 'cinematic-line chapter1-cinematic-line';
-    scene.append(text);
-    this.replaceScene(scene);
-    for (const line of lines) {
-      text.textContent = line;
-      text.classList.add('is-visible');
-      if (!(await this.waitSkippable(displayDuration, scene))) return false;
-      text.classList.remove('is-visible');
-      if (!(await wait(this.duration(500, 70), this.abortController.signal))) return false;
-    }
-    return true;
-  }
-
-  private waitSkippable(milliseconds: number, target: HTMLElement): Promise<boolean> {
-    return new Promise((resolve) => {
-      let finished = false;
-      const complete = (result: boolean): void => {
-        if (finished) return;
-        finished = true;
-        window.clearTimeout(timer);
-        offConfirm();
-        offSpace();
-        target.removeEventListener('click', handleClick);
-        this.abortController.signal.removeEventListener('abort', handleAbort);
-        this.removeAdvanceListeners = null;
-        resolve(result);
-      };
-      const handleClick = (): void => complete(true);
-      const handleAbort = (): void => complete(false);
-      const timer = window.setTimeout(() => complete(true), milliseconds);
-      const offConfirm = this.context.input.onPress('confirm', () => complete(true));
-      const offSpace = this.context.input.onPress('space', () => complete(true));
-      target.addEventListener('click', handleClick);
-      this.abortController.signal.addEventListener('abort', handleAbort, { once: true });
-      this.removeAdvanceListeners = () => complete(false);
+    this.comparisonSystem.hideComparison();
+    return showCinematicLines({
+      root: this.context.root,
+      input: this.context.input,
+      signal: this.abortController.signal,
+      lines,
+      className,
+      displayDuration,
+      gapDuration: this.duration(500, 70),
+      textClassName: 'chapter1-cinematic-line',
     });
   }
 
@@ -468,15 +437,7 @@ export class Chapter1Scene implements Scene {
   }
 
   private createChapterCard(eyebrowText: string, titleText: string): HTMLElement {
-    const card = document.createElement('div');
-    card.className = 'chapter-card';
-    const eyebrow = document.createElement('p');
-    eyebrow.className = 'chapter-eyebrow';
-    eyebrow.textContent = eyebrowText;
-    const title = document.createElement('h1');
-    title.textContent = titleText;
-    card.append(eyebrow, title);
-    return card;
+    return createChapterCard(eyebrowText, titleText);
   }
 
   private replaceScene(scene: HTMLElement): void {
@@ -485,6 +446,6 @@ export class Chapter1Scene implements Scene {
   }
 
   private duration(standard: number, reduced: number): number {
-    return prefersReducedMotion() ? reduced : standard;
+    return motionDuration(standard, reduced);
   }
 }

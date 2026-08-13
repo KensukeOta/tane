@@ -6,7 +6,9 @@ export type SoundId =
   | 'soccer-goal'
   | 'comparison-add'
   | 'choice-click'
-  | 'applause';
+  | 'applause'
+  | 'tennis-hit'
+  | 'tennis-miss';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();

@@ -3,6 +3,7 @@ import './styles/global.css';
 import './styles/game.css';
 import './styles/dialogue.css';
 import './styles/chapter1.css';
+import './styles/chapter2.css';
 
 const app = document.querySelector<HTMLElement>('#app');
 

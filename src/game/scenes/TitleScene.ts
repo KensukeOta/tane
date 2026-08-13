@@ -38,7 +38,7 @@ export class TitleScene implements Scene {
           const saved = this.context.save.load();
           if (!saved) return;
           Object.assign(this.context.getState(), saved);
-          const resumableScenes = new Set(['chapter1-start', 'chapter2-start']);
+          const resumableScenes = new Set(['chapter1-start', 'chapter2-start', 'chapter3-start']);
           void this.context.navigate(resumableScenes.has(saved.sceneId) ? saved.sceneId : 'title');
         },
       },

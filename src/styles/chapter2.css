@@ -1,0 +1,840 @@
+.middle-school-spring-scene {
+  background: linear-gradient(180deg, #b7b69e 0 66%, #7d7b64 66%);
+}
+
+.spring-school {
+  position: absolute;
+  inset: 0;
+  filter: saturate(0.72);
+}
+
+.school-building {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 55%;
+  height: 54%;
+  border: 1px solid #6c685c;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 11%, rgb(53 57 54 / 43%) 11% 15%, transparent 15% 23%),
+    repeating-linear-gradient(180deg, #b5afa0 0 20%, #898980 20% 24%);
+  box-shadow: 0 12px 28px rgb(40 39 34 / 16%);
+}
+
+.school-tree {
+  position: absolute;
+  top: 16%;
+  left: 13%;
+  width: 22%;
+  height: 45%;
+  border-radius: 52% 45% 50% 42%;
+  background: #89906d;
+  box-shadow: 5vw 2vw 0 -2vw #929575;
+}
+
+.school-tree::after {
+  content: '';
+  position: absolute;
+  top: 74%;
+  left: 47%;
+  width: 7%;
+  height: 57%;
+  background: #675b4a;
+}
+
+.spring-path {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 34%;
+  background: linear-gradient(110deg, #86816e 0 38%, #a8a28c 38% 67%, #777660 67%);
+}
+
+.chapter2-figure {
+  position: absolute;
+  z-index: 5;
+  width: clamp(31px, 4.6vw, 59px);
+  height: clamp(72px, 10.5vw, 135px);
+}
+
+.chapter2-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 49%;
+  background: #302f2a;
+}
+
+.chapter2-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 66%;
+  border-radius: 34% 34% 11% 11%;
+  background: #434641;
+}
+
+.spring-protagonist {
+  bottom: 14%;
+  left: 34%;
+}
+
+.spring-intro-text {
+  position: absolute;
+  z-index: 8;
+  right: 8%;
+  bottom: 10%;
+  left: 8%;
+  margin: 0;
+  padding: clamp(0.75rem, 2.4vw, 1.5rem);
+  background: rgb(25 25 22 / 67%);
+  color: #f0ece3;
+  font-size: clamp(0.85rem, 1.8vw, 1.2rem);
+  letter-spacing: 0.1em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 550ms ease;
+}
+
+.spring-intro-text.is-visible {
+  opacity: 1;
+}
+
+.club-exploration-scene {
+  background: linear-gradient(180deg, #a9a48e 0 24%, #77796d 24% 72%, #57594f 72%);
+}
+
+.club-exploration-scene::before {
+  content: '';
+  position: absolute;
+  inset: 24% 0 28%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 12%, rgb(36 38 36 / 28%) 12% 14%, transparent 14% 25%),
+    #929185;
+  opacity: 0.72;
+}
+
+.club-heading {
+  background: rgb(34 34 30 / 35%);
+  padding: 0.45rem 0.7rem;
+}
+
+.club-movement-hint {
+  white-space: nowrap;
+}
+
+.club-exploration {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+.club-zone {
+  position: absolute;
+  top: 31%;
+  width: 22%;
+  height: 38%;
+  border: 1px solid rgb(222 216 197 / 28%);
+  background: rgb(58 59 53 / 25%);
+}
+
+.club-zone span {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  padding: 0.3rem 0.55rem;
+  background: rgb(31 32 29 / 55%);
+  color: #e7e2d7;
+  font-size: clamp(0.65rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.09em;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.club-zone--culture {
+  left: 8%;
+}
+
+.club-zone--culture::after {
+  content: '美術　音楽';
+  position: absolute;
+  right: 0;
+  bottom: 12%;
+  left: 0;
+  color: rgb(236 229 211 / 52%);
+  font-size: clamp(0.55rem, 1vw, 0.72rem);
+  text-align: center;
+}
+
+.club-zone--soccer {
+  left: 39%;
+  background: linear-gradient(180deg, rgb(69 81 61 / 32%), rgb(52 62 49 / 35%));
+}
+
+.club-zone--soccer::after {
+  content: '';
+  position: absolute;
+  right: 12%;
+  bottom: 12%;
+  width: 35%;
+  height: 36%;
+  border: 2px solid rgb(229 225 210 / 40%);
+}
+
+.club-zone--tennis {
+  right: 7%;
+  background:
+    linear-gradient(90deg, transparent 49%, rgb(237 231 210 / 20%) 50%, transparent 51%),
+    #77745f;
+}
+
+.club-zone--tennis::after {
+  content: '';
+  position: absolute;
+  right: 8%;
+  bottom: 26%;
+  left: 8%;
+  height: 2px;
+  background: rgb(235 231 216 / 48%);
+}
+
+.club-player {
+  position: absolute;
+  z-index: 5;
+  bottom: 12%;
+  width: clamp(28px, 4vw, 52px);
+  height: clamp(64px, 9.3vw, 120px);
+  transform: translateX(-50%);
+  transition: left 65ms linear;
+}
+
+.club-player-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #302f2a;
+}
+
+.club-player-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 65%;
+  border-radius: 32% 32% 10% 10%;
+  background: #41443f;
+}
+
+.club-player.is-walking .club-player-body {
+  transform: rotate(2deg);
+}
+
+.club-player.faces-left {
+  filter: brightness(0.9);
+}
+
+.club-monologue {
+  position: absolute;
+  z-index: 10;
+  bottom: 31%;
+  left: 18%;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  background: rgb(29 29 26 / 64%);
+  color: #eee9de;
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.club-monologue.is-visible {
+  opacity: 1;
+}
+
+.comparison-trace {
+  position: absolute;
+  z-index: 12;
+  top: 18%;
+  left: 50%;
+  color: rgb(232 229 220 / 16%);
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.18em;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 700ms ease;
+}
+
+.comparison-trace.is-visible {
+  opacity: 1;
+}
+
+.tennis-scene {
+  background: linear-gradient(180deg, #938b70 0 11%, #73775d 11% 89%, #535548 89%);
+  transition: filter 700ms ease, background-color 700ms ease;
+}
+
+.chapter2-court-lines {
+  position: absolute;
+  z-index: 1;
+  inset: 10% 8%;
+  border: 2px solid rgb(242 236 215 / 50%);
+  background:
+    linear-gradient(90deg, transparent 49.8%, rgb(242 236 215 / 32%) 50%, transparent 50.2%),
+    linear-gradient(180deg, transparent 49.7%, rgb(242 236 215 / 42%) 50%, transparent 50.3%);
+}
+
+.chapter2-tennis-net {
+  position: absolute;
+  z-index: 3;
+  top: 49%;
+  right: 5%;
+  left: 5%;
+  height: 4.5%;
+  border-top: 3px solid rgb(238 234 220 / 74%);
+  background: repeating-linear-gradient(90deg, transparent 0 9px, rgb(232 229 215 / 24%) 10px 11px);
+  box-shadow: 0 5px 8px rgb(33 34 28 / 16%);
+}
+
+.tennis-heading {
+  color: rgb(247 240 221 / 83%);
+}
+
+.chapter2-racket {
+  position: absolute;
+  top: 34%;
+  right: -28%;
+  width: 38%;
+  aspect-ratio: 0.72;
+  border: 2px solid #665d4e;
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
+
+.chapter2-racket::after {
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 47%;
+  width: 3px;
+  height: 70%;
+  background: #665d4e;
+}
+
+.tennis-encounter-player {
+  bottom: 14%;
+  left: 44%;
+}
+
+.tennis-scene-line,
+.dusk-line {
+  position: absolute;
+  z-index: 8;
+  right: 9%;
+  bottom: 14%;
+  margin: 0;
+  color: #eeeadd;
+  font-size: clamp(0.8rem, 1.7vw, 1.15rem);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.tennis-scene-line.is-visible,
+.dusk-line.is-visible {
+  opacity: 1;
+}
+
+.tennis-controls {
+  position: absolute;
+  z-index: 15;
+  bottom: 3%;
+  left: 50%;
+  max-width: 90%;
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  background: rgb(24 26 22 / 64%);
+  color: #f4eedf;
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.62rem, 1.2vw, 0.82rem);
+  text-align: center;
+  white-space: nowrap;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: opacity 500ms ease;
+}
+
+.tennis-controls.is-hidden {
+  opacity: 0;
+}
+
+.tennis-minigame {
+  --rally-warmth: 0;
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  overflow: hidden;
+  background: rgb(197 172 105 / calc(var(--rally-warmth) * 0.012));
+  filter:
+    saturate(calc(0.84 + var(--rally-warmth) * 0.045))
+    brightness(calc(0.94 + var(--rally-warmth) * 0.012));
+  transition: filter 650ms ease, background-color 650ms ease;
+}
+
+.tennis-court-lines {
+  position: absolute;
+  inset: 10% 8%;
+  border: 2px solid rgb(245 238 218 / 55%);
+  background:
+    linear-gradient(90deg, transparent 49.8%, rgb(245 238 218 / 32%) 50%, transparent 50.2%),
+    linear-gradient(180deg, transparent 49.7%, rgb(245 238 218 / 36%) 50%, transparent 50.3%);
+}
+
+.tennis-net {
+  position: absolute;
+  z-index: 5;
+  top: 49%;
+  right: 5%;
+  left: 5%;
+  height: 4.5%;
+  border-top: 3px solid rgb(244 239 223 / 80%);
+  background: repeating-linear-gradient(90deg, transparent 0 9px, rgb(237 233 217 / 28%) 10px 11px);
+}
+
+.tennis-player {
+  position: absolute;
+  z-index: 6;
+  width: clamp(27px, 4vw, 51px);
+  height: clamp(58px, 8.3vw, 107px);
+  transform: translateX(-50%);
+  transition: left 60ms linear, transform 180ms ease;
+}
+
+.tennis-player--self {
+  bottom: 5%;
+}
+
+.tennis-player--opponent {
+  top: 5%;
+  left: 62%;
+  transform: translateX(-50%) scale(0.72);
+  opacity: 0.78;
+}
+
+.tennis-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #2f2e29;
+}
+
+.tennis-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 65%;
+  border-radius: 34% 34% 10% 10%;
+  background: #414840;
+}
+
+.tennis-player--opponent .tennis-body {
+  background: #4c4c40;
+}
+
+.tennis-racket {
+  position: absolute;
+  top: 34%;
+  right: -30%;
+  width: 38%;
+  aspect-ratio: 0.72;
+  border: 2px solid #6e6250;
+  border-radius: 50%;
+  transform: rotate(22deg);
+}
+
+.tennis-racket::after {
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 46%;
+  width: 3px;
+  height: 70%;
+  background: #6e6250;
+}
+
+.tennis-player.is-moving .tennis-body {
+  transform: rotate(2deg);
+}
+
+.tennis-player--self.is-hitting {
+  transform: translateX(-50%) rotate(-7deg);
+}
+
+.tennis-player--opponent.is-hitting {
+  transform: translateX(-50%) scale(0.72) rotate(-6deg);
+}
+
+.tennis-ball,
+.montage-tennis-ball,
+.scattered-tennis-balls span {
+  border: 1px solid #87833c;
+  border-radius: 50%;
+  background: #d6d45c;
+  box-shadow: 0 0 5px rgb(234 228 109 / 20%);
+}
+
+.tennis-ball {
+  position: absolute;
+  z-index: 8;
+  width: clamp(8px, 1.1vw, 14px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.tennis-ball.is-returned {
+  box-shadow: 0 0 14px rgb(243 232 119 / 55%);
+  transform: translate(-50%, -50%) scale(1.18);
+}
+
+.tennis-ball.is-missed {
+  opacity: 0.55;
+}
+
+.rally-display {
+  position: absolute;
+  z-index: 12;
+  top: 5%;
+  right: 6%;
+  margin: 0;
+  color: rgb(247 241 221 / 76%);
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.65rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.07em;
+}
+
+.tennis-feedback {
+  position: absolute;
+  z-index: 12;
+  right: 0;
+  bottom: 25%;
+  left: 0;
+  margin: 0;
+  color: rgb(250 243 221 / 82%);
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  letter-spacing: 0.12em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.tennis-feedback.is-visible {
+  opacity: 1;
+}
+
+.rally-thought {
+  position: absolute;
+  z-index: 16;
+  bottom: 18%;
+  left: 50%;
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  background: rgb(25 27 23 / 55%);
+  color: #f2edde;
+  font-size: clamp(0.78rem, 1.55vw, 1.05rem);
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 250ms ease;
+}
+
+.rally-thought.is-visible {
+  opacity: 1;
+}
+
+.dusk-tennis-scene {
+  background: linear-gradient(180deg, #9d866a 0 28%, #747259 28% 89%, #515046 89%);
+  filter: saturate(0.88);
+}
+
+.dusk-tennis-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(219 159 105 / 11%), transparent 55%, rgb(29 32 27 / 12%));
+  pointer-events: none;
+}
+
+.dusk-protagonist {
+  bottom: 14%;
+  left: 42%;
+  transform: rotate(4deg);
+}
+
+.scattered-tennis-balls span {
+  position: absolute;
+  z-index: 5;
+  width: clamp(7px, 1vw, 12px);
+  aspect-ratio: 1;
+}
+
+.scattered-tennis-balls span:nth-child(1) {
+  bottom: 13%;
+  left: 29%;
+}
+
+.scattered-tennis-balls span:nth-child(2) {
+  right: 27%;
+  bottom: 17%;
+}
+
+.scattered-tennis-balls span:nth-child(3) {
+  right: 39%;
+  bottom: 28%;
+}
+
+.personal-value-display {
+  top: 22%;
+  left: 50%;
+  display: grid;
+  min-width: clamp(135px, 18vw, 225px);
+  gap: 0.55rem;
+  color: #f2ecdc;
+  text-align: center;
+  transform: translate(-50%, 5px);
+  opacity: 0;
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+
+.personal-value-display.is-visible {
+  opacity: 0.88;
+  transform: translate(-50%, 0);
+}
+
+.personal-value-display.is-leaving {
+  opacity: 0;
+}
+
+.personal-value-text {
+  font-size: clamp(0.85rem, 1.8vw, 1.2rem);
+  letter-spacing: 0.14em;
+}
+
+.tennis-montage-scene {
+  filter: saturate(0.94) brightness(1.01);
+}
+
+.montage-stage-1 {
+  filter: saturate(1) brightness(1.025);
+}
+
+.montage-stage-2 {
+  filter: saturate(1.06) brightness(1.04);
+}
+
+.montage-stage-3 {
+  filter: saturate(1.1) brightness(1.055);
+}
+
+.montage-tennis-player {
+  bottom: 12%;
+  left: 36%;
+  transform-origin: bottom;
+}
+
+.montage-tennis-ball {
+  position: absolute;
+  z-index: 6;
+  top: 62%;
+  left: 46%;
+  width: clamp(8px, 1.1vw, 14px);
+  aspect-ratio: 1;
+}
+
+.tennis-montage-scene.is-playing .montage-tennis-player {
+  animation: montage-swing 900ms ease-in-out 2;
+}
+
+.tennis-montage-scene.is-playing .montage-tennis-ball {
+  animation: montage-ball 900ms ease-in-out 2;
+}
+
+.montage-stage-3.is-playing .montage-tennis-player {
+  animation-name: montage-serve;
+}
+
+.montage-stage-3.is-playing .montage-tennis-ball {
+  animation-name: serve-ball;
+}
+
+.montage-action {
+  position: absolute;
+  z-index: 8;
+  top: 14%;
+  right: 8%;
+  margin: 0;
+  color: rgb(246 238 216 / 62%);
+  font-size: clamp(0.65rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.12em;
+}
+
+.montage-line {
+  position: absolute;
+  z-index: 8;
+  right: 12%;
+  bottom: 16%;
+  margin: 0;
+  color: #f1ead9;
+  font-size: clamp(0.8rem, 1.65vw, 1.1rem);
+  letter-spacing: 0.1em;
+}
+
+.absorption-text-scene {
+  background: radial-gradient(circle at 50% 45%, rgb(153 136 91 / 12%), transparent 42%), #10110f;
+}
+
+.chapter2-cinematic-line {
+  max-width: 84%;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.resting-root-scene {
+  background: #15110e;
+}
+
+.resting-soil-field {
+  inset: 0;
+  border: 0;
+}
+
+.root-soft-light {
+  position: absolute;
+  z-index: 1;
+  top: 7%;
+  left: 50%;
+  width: 28%;
+  height: 58%;
+  background: linear-gradient(180deg, rgb(210 185 127 / 13%), rgb(190 162 105 / 2%) 72%, transparent);
+  clip-path: polygon(43% 0, 57% 0, 78% 100%, 22% 100%);
+  filter: blur(7px);
+  transform: translateX(-50%);
+}
+
+.root-seed.is-resting {
+  box-shadow: 0 0 12px rgb(204 175 108 / 10%);
+}
+
+.root-seed.is-resting .first-root,
+.root-seed.is-resting .first-root.is-grown {
+  transition: none;
+  transform: rotate(-7deg) scaleY(1);
+}
+
+.chapter3-connection-scene,
+.chapter3-title-scene {
+  display: grid;
+  place-items: center;
+  background: #090909;
+}
+
+.connection-second-half {
+  background: #080808;
+}
+
+.chapter3-title-scene .chapter-card h1,
+.chapter3-placeholder-scene .chapter-card h1 {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+}
+
+@keyframes montage-swing {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  48% {
+    transform: rotate(-7deg);
+  }
+}
+
+@keyframes montage-ball {
+  0% {
+    top: 68%;
+    left: 41%;
+  }
+  50% {
+    top: 32%;
+    left: 62%;
+  }
+  100% {
+    top: 16%;
+    left: 55%;
+  }
+}
+
+@keyframes montage-serve {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  45% {
+    transform: rotate(9deg) translateY(-3%);
+  }
+}
+
+@keyframes serve-ball {
+  0% {
+    top: 60%;
+    left: 40%;
+  }
+  45% {
+    top: 24%;
+    left: 42%;
+  }
+  100% {
+    top: 10%;
+    left: 69%;
+  }
+}
+
+@media (max-width: 560px) {
+  .tennis-controls {
+    white-space: normal;
+  }
+
+  .club-zone {
+    width: 25%;
+  }
+
+  .club-zone--culture {
+    left: 4%;
+  }
+
+  .club-zone--soccer {
+    left: 37.5%;
+  }
+
+  .club-zone--tennis {
+    right: 4%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tennis-montage-scene.is-playing .montage-tennis-player,
+  .tennis-montage-scene.is-playing .montage-tennis-ball {
+    animation: none;
+  }
+
+  .personal-value-display.is-visible {
+    opacity: 0.88;
+  }
+}

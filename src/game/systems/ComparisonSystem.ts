@@ -53,6 +53,36 @@ export class ComparisonSystem {
     return display;
   }
 
+  public showPersonalValue(parent: HTMLElement, labelText: string, valueText: string): HTMLElement {
+    this.hideComparison();
+    const display = document.createElement('aside');
+    display.className = 'comparison-hud personal-value-display';
+    display.setAttribute('aria-label', '自分自身の感覚');
+    const label = document.createElement('span');
+    label.className = 'comparison-hud-label';
+    label.textContent = labelText;
+    const value = document.createElement('span');
+    value.className = 'personal-value-text';
+    value.textContent = valueText;
+    display.append(label, value);
+    parent.append(display);
+    this.display = display;
+    requestAnimationFrame(() => display.classList.add('is-visible'));
+    return display;
+  }
+
+  public showTrace(parent: HTMLElement, text: string): HTMLElement {
+    this.hideComparison();
+    const trace = document.createElement('aside');
+    trace.className = 'comparison-trace';
+    trace.setAttribute('aria-label', text);
+    trace.textContent = text;
+    parent.append(trace);
+    this.display = trace;
+    requestAnimationFrame(() => trace.classList.add('is-visible'));
+    return trace;
+  }
+
   public hideComparison(): void {
     this.display?.remove();
     this.display = null;

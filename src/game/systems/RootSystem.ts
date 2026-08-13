@@ -29,4 +29,11 @@ export class RootSystem {
     parent.append(seed);
     return seed;
   }
+
+  public renderRestingRoot(parent: HTMLElement): HTMLElement {
+    const seed = this.render(parent, 2);
+    seed.classList.add('is-resting');
+    seed.querySelector('.first-root')?.classList.add('is-grown');
+    return seed;
+  }
 }
