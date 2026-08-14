@@ -1,0 +1,662 @@
+.chapter3-school-scene {
+  background: linear-gradient(180deg, #99968a 0 18%, #777871 18% 76%, #5f6059 76%);
+  filter: saturate(0.78);
+}
+
+.chapter3-school-background {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 14%, rgb(41 43 42 / 24%) 14% 16%, transparent 16% 28%),
+    linear-gradient(180deg, transparent 0 22%, rgb(207 204 190 / 13%) 22% 24%, transparent 24%);
+}
+
+.chapter3-heading,
+.avoidance-heading {
+  padding: 0.4rem 0.7rem;
+  background: rgb(31 32 30 / 36%);
+}
+
+.chapter3-scene-line {
+  position: absolute;
+  z-index: 12;
+  right: 7%;
+  bottom: 8%;
+  left: 7%;
+  margin: 0;
+  padding: clamp(0.7rem, 2vw, 1.25rem);
+  background: rgb(26 27 25 / 67%);
+  color: #eeebe3;
+  font-size: clamp(0.82rem, 1.7vw, 1.15rem);
+  letter-spacing: 0.09em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.chapter3-scene-line.is-visible {
+  opacity: 1;
+}
+
+.comparison-hud--stage4 {
+  border-color: rgb(198 187 168 / 42%);
+  background: rgb(18 18 17 / 78%);
+}
+
+.comparison-hud--expanded,
+.comparison-hud--returned {
+  top: 7%;
+  min-width: clamp(175px, 24vw, 310px);
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+  gap: clamp(0.8rem, 2vh, 1.2rem);
+  border-color: rgb(196 184 164 / 48%);
+  background: rgb(16 16 15 / 84%);
+}
+
+.comparison-hud--expanded .comparison-hud-row,
+.comparison-hud--returned .comparison-hud-row {
+  gap: 0.4rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgb(218 207 185 / 10%);
+}
+
+.chapter3-figure {
+  position: absolute;
+  z-index: 6;
+  width: clamp(28px, 4vw, 51px);
+  height: clamp(64px, 9.4vw, 120px);
+}
+
+.chapter3-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 49%;
+  background: #2d2d2a;
+}
+
+.chapter3-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 66%;
+  border-radius: 33% 33% 10% 10%;
+  background: #41433f;
+}
+
+.sibling-friend-group {
+  position: absolute;
+  z-index: 5;
+  right: 12%;
+  bottom: 18%;
+  display: flex;
+  align-items: end;
+  gap: clamp(0.65rem, 2vw, 1.5rem);
+  width: 48%;
+  height: 45%;
+}
+
+.sibling-friend-group .chapter3-figure {
+  position: relative;
+  flex: 0 0 clamp(24px, 3.4vw, 44px);
+  height: clamp(55px, 7.8vw, 100px);
+}
+
+.sibling-friend-group .chapter3-figure:nth-child(even) {
+  transform: translateY(-8%);
+}
+
+.sibling-student .chapter3-body {
+  background: #4f5045;
+}
+
+.friend-student .chapter3-body {
+  background: #454741;
+}
+
+.ordinary-conversation {
+  position: absolute;
+  z-index: 8;
+  top: 24%;
+  right: 20%;
+  margin: 0;
+  color: rgb(239 235 223 / 63%);
+  font-size: clamp(0.68rem, 1.35vw, 0.92rem);
+  letter-spacing: 0.08em;
+}
+
+.passing-protagonist {
+  bottom: 12%;
+  left: 8%;
+  opacity: 0.82;
+  transition: left 3800ms linear;
+}
+
+.passing-protagonist.is-passing {
+  left: 43%;
+}
+
+.avoidance-scene {
+  --distress: 0;
+  --distress-dim: 0;
+  background: linear-gradient(180deg, #a09d91 0 15%, #85857e 15% 84%, #666760 84%);
+  transition: background-color 500ms ease;
+}
+
+.avoidance-scene::before {
+  content: '';
+  position: absolute;
+  inset: 15% 0 16%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 12%, rgb(54 55 53 / 18%) 12% 14%, transparent 14% 25%),
+    linear-gradient(180deg, rgb(220 217 205 / 8%), transparent 55%);
+}
+
+.avoidance-scene::after {
+  content: '';
+  position: absolute;
+  z-index: 8;
+  inset: 0;
+  background: rgb(34 34 32 / var(--distress-dim));
+  pointer-events: none;
+}
+
+.avoidance-scene.is-calm {
+  background-color: #8b8b7e;
+}
+
+.avoidance-hint {
+  position: absolute;
+  z-index: 18;
+  bottom: 3%;
+  left: 50%;
+  max-width: 92%;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  background: rgb(27 28 26 / 68%);
+  color: #f0ece2;
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.6rem, 1.2vw, 0.82rem);
+  text-align: center;
+  white-space: nowrap;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: opacity 500ms ease;
+}
+
+.avoidance-hint.is-hidden {
+  opacity: 0;
+}
+
+.quiet-route-label {
+  position: absolute;
+  z-index: 7;
+  left: 8%;
+  margin: 0;
+  color: rgb(236 233 221 / 38%);
+  font-size: clamp(0.55rem, 1vw, 0.72rem);
+  letter-spacing: 0.1em;
+}
+
+.hallway-avoidance {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hallway-route {
+  position: absolute;
+  right: 5%;
+  left: 5%;
+  height: 2px;
+  border-top: 1px dashed rgb(232 227 212 / 17%);
+}
+
+.hallway-route--short {
+  top: 52%;
+}
+
+.hallway-route--quiet {
+  border-color: rgb(232 227 212 / 10%);
+}
+
+.hallway-exit {
+  position: absolute;
+  z-index: 6;
+  top: 49%;
+  right: 2.5%;
+  color: rgb(239 234 220 / 48%);
+  font-family: system-ui, sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+}
+
+.hallway-group {
+  position: absolute;
+  z-index: 7;
+  display: flex;
+  align-items: end;
+  gap: clamp(0.2rem, 0.65vw, 0.55rem);
+  width: clamp(90px, 15vw, 185px);
+  height: clamp(62px, 10vw, 128px);
+  transform: translate(-50%, -50%);
+}
+
+.hallway-group span {
+  position: relative;
+  flex: 1 1 0;
+  height: 72%;
+  min-width: 11px;
+  border-radius: 38% 38% 10% 10%;
+  background: #484a46;
+  opacity: 0.88;
+}
+
+.hallway-group span::before {
+  content: '';
+  position: absolute;
+  top: -28%;
+  left: 25%;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #363733;
+}
+
+.hallway-group span:nth-child(even) {
+  height: 78%;
+  transform: translateY(-12%);
+}
+
+.hallway-player {
+  position: absolute;
+  z-index: 12;
+  width: clamp(24px, 3.5vw, 45px);
+  height: clamp(55px, 8vw, 103px);
+  transform: translate(-50%, -50%);
+  transition: left 60ms linear, top 60ms linear;
+}
+
+.hallway-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #292a27;
+}
+
+.hallway-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 66%;
+  border-radius: 34% 34% 10% 10%;
+  background: #3d403c;
+}
+
+.hallway-player.is-walking .hallway-body {
+  transform: rotate(2deg);
+}
+
+.distress-overlay {
+  --distress: 0;
+  position: absolute;
+  z-index: 15;
+  inset: 0;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 10vw rgb(37 35 34 / 28%);
+  opacity: var(--distress);
+  pointer-events: none;
+  transition: opacity 280ms ease;
+}
+
+.distress-overlay.noise-enabled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, rgb(33 32 31 / 5%) 4px 5px),
+    radial-gradient(circle at 4% 50%, rgb(30 29 28 / 28%), transparent 24%),
+    radial-gradient(circle at 96% 45%, rgb(30 29 28 / 25%), transparent 23%);
+}
+
+.distress-fragment {
+  position: absolute;
+  top: 17%;
+  right: 8%;
+  color: rgb(238 232 220 / 48%);
+  font-size: clamp(0.72rem, 1.55vw, 1rem);
+  letter-spacing: 0.12em;
+  filter: blur(0.25px);
+}
+
+.distress-overlay:not(.noise-enabled) {
+  box-shadow: inset 0 0 7vw rgb(43 41 39 / 20%);
+}
+
+.distress-overlay:not(.noise-enabled) .distress-fragment {
+  filter: none;
+  color: rgb(240 235 224 / 58%);
+}
+
+.classroom-conversation-scene {
+  background: linear-gradient(180deg, #99968c 0 67%, #68665f 67%);
+}
+
+.chapter3-desk {
+  position: absolute;
+  z-index: 4;
+  bottom: 10%;
+  left: 20%;
+  width: 21%;
+  height: 25%;
+  border-top: 6px solid #686051;
+  background: linear-gradient(90deg, transparent 7%, #514b41 7% 12%, transparent 12% 88%, #514b41 88% 93%, transparent 93%);
+}
+
+.seated-protagonist {
+  bottom: 23%;
+  left: 27%;
+  filter: brightness(0.82);
+}
+
+.talking-classmates {
+  position: absolute;
+  z-index: 6;
+  top: 31%;
+  right: 16%;
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.2rem);
+  width: 24%;
+  height: 34%;
+}
+
+.talking-classmates .chapter3-figure {
+  position: relative;
+  flex: 1 1 0;
+}
+
+.classroom-caption {
+  position: absolute;
+  z-index: 11;
+  right: 9%;
+  bottom: 8%;
+  left: 9%;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: rgb(26 27 25 / 70%);
+  color: #eeeadf;
+  font-size: clamp(0.78rem, 1.65vw, 1.1rem);
+  letter-spacing: 0.07em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.classroom-caption.is-visible {
+  opacity: 1;
+}
+
+.unnoticed-choice-scene {
+  background: linear-gradient(180deg, #8f8d83 0 18%, #73746e 18% 82%, #5c5d57 82%);
+}
+
+.choice-protagonist {
+  bottom: 13%;
+  left: 34%;
+}
+
+.approaching-student {
+  right: 25%;
+  bottom: 13%;
+  transition: right 800ms ease, opacity 800ms ease;
+}
+
+.approaching-student.is-leaving {
+  right: 8%;
+  opacity: 0.38;
+}
+
+.approach-prompt {
+  position: absolute;
+  z-index: 9;
+  top: 22%;
+  left: 50%;
+  margin: 0;
+  color: #ece8de;
+  font-size: clamp(0.8rem, 1.6vw, 1.08rem);
+  transform: translateX(-50%);
+}
+
+.unnoticed-choice-host {
+  position: absolute;
+  z-index: 10;
+  top: 37%;
+  left: 50%;
+  width: min(38%, 390px);
+  min-width: 230px;
+  transform: translateX(-50%);
+}
+
+.unnoticed-thought-scene {
+  background: #0d0d0c;
+}
+
+.chapter3-cinematic-line {
+  max-width: 84%;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.avoidance-montage-scene {
+  filter: saturate(0.7);
+}
+
+.montage-crowd {
+  position: absolute;
+  z-index: 5;
+  right: 10%;
+  bottom: 18%;
+  display: flex;
+  align-items: end;
+  gap: clamp(0.35rem, 1.2vw, 0.9rem);
+  width: 38%;
+  height: 35%;
+}
+
+.montage-crowd .chapter3-figure {
+  position: relative;
+  flex: 1 1 0;
+  height: clamp(48px, 6.8vw, 87px);
+}
+
+.montage-protagonist {
+  bottom: 10%;
+  left: 18%;
+  opacity: 0.82;
+  transition: left 1900ms ease, bottom 1900ms ease;
+}
+
+.far-path .montage-protagonist.is-moving-away {
+  left: 54%;
+  bottom: 5%;
+}
+
+.room-edge .montage-protagonist {
+  left: 10%;
+}
+
+.room-edge .montage-protagonist.is-moving-away {
+  left: 15%;
+}
+
+.empty-route .montage-protagonist.is-moving-away {
+  left: 70%;
+  bottom: 5%;
+}
+
+.avoidance-montage-line {
+  position: absolute;
+  z-index: 9;
+  right: 8%;
+  bottom: 7%;
+  left: 8%;
+  margin: 0;
+  color: #e6e2d8;
+  font-size: clamp(0.8rem, 1.7vw, 1.12rem);
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.chapter3-tennis-scene {
+  filter: saturate(0.94) brightness(1.01);
+}
+
+.chapter3-tennis-thought {
+  position: absolute;
+  z-index: 16;
+  right: 10%;
+  bottom: 16%;
+  margin: 0;
+  color: #f1ead8;
+  font-size: clamp(0.78rem, 1.6vw, 1.08rem);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+
+.chapter3-tennis-thought.is-visible {
+  opacity: 1;
+}
+
+.school-gate-scene {
+  background: linear-gradient(180deg, #967d69 0 52%, #666459 52% 82%, #4f5049 82%);
+  filter: saturate(0.74);
+}
+
+.evening-school-gate {
+  position: absolute;
+  z-index: 2;
+  right: 14%;
+  bottom: 16%;
+  width: 42%;
+  height: 55%;
+  border-right: clamp(5px, 0.8vw, 10px) solid #3e3e3a;
+  border-left: clamp(5px, 0.8vw, 10px) solid #3e3e3a;
+  background: repeating-linear-gradient(90deg, transparent 0 9%, rgb(48 49 46 / 52%) 10% 12%);
+}
+
+.leaving-school-protagonist {
+  bottom: 10%;
+  left: 15%;
+  transition: left 2600ms linear;
+}
+
+.leaving-school-protagonist.is-walking-home {
+  left: 43%;
+}
+
+.leaving-school-line {
+  position: absolute;
+  z-index: 8;
+  bottom: 8%;
+  left: 8%;
+  margin: 0;
+  color: rgb(238 230 216 / 68%);
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+}
+
+.comparison-hud--returned {
+  opacity: 0;
+  transition-duration: 1200ms;
+}
+
+.comparison-hud--returned.is-visible {
+  opacity: 0.88;
+}
+
+.chapter3-root-scene {
+  background: #15110e;
+}
+
+.chapter3-soil-field {
+  inset: 0;
+  border: 0;
+}
+
+.root-stage-3 .first-root {
+  height: clamp(78px, 17vh, 135px);
+  transition-duration: 2900ms;
+}
+
+.root-branch {
+  position: absolute;
+  top: 56%;
+  left: 0;
+  width: 1px;
+  height: clamp(22px, 4.5vh, 38px);
+  background: #b8a886;
+  opacity: 0.6;
+  transform: rotate(53deg) scaleY(0);
+  transform-origin: top;
+  transition: transform 1700ms ease 1200ms;
+}
+
+.root-stage-3 .first-root.is-growing .root-branch {
+  transform: rotate(53deg) scaleY(1);
+}
+
+.chapter4-connection-scene,
+.chapter4-title-scene {
+  display: grid;
+  place-items: center;
+  background: #080808;
+}
+
+.chapter4-title-scene .chapter-card h1,
+.chapter4-placeholder-scene .chapter-card h1 {
+  font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+}
+
+@media (max-width: 560px) {
+  .avoidance-hint {
+    white-space: normal;
+  }
+
+  .hallway-group {
+    width: 105px;
+  }
+
+  .comparison-hud--expanded,
+  .comparison-hud--returned {
+    min-width: 145px;
+    padding: 0.65rem;
+  }
+
+  .unnoticed-choice-host {
+    top: 34%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passing-protagonist.is-passing {
+    left: 43%;
+  }
+
+  .distress-overlay,
+  .avoidance-scene::after {
+    transition: none;
+  }
+
+  .root-stage-3 .first-root,
+  .root-stage-3 .root-branch {
+    transition-duration: 0.01ms;
+    transition-delay: 0ms;
+  }
+}
