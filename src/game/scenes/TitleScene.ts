@@ -28,7 +28,7 @@ export class TitleScene implements Scene {
         label: 'はじめから',
         action: () => {
           this.context.resetState();
-          void this.context.navigate('content-note');
+          void this.context.navigate('prologue');
         },
       },
       {
@@ -45,6 +45,7 @@ export class TitleScene implements Scene {
             'chapter4-start',
             'chapter5-start',
             'chapter6-start',
+            'final-chapter-start',
           ]);
           void this.context.navigate(resumableScenes.has(saved.sceneId) ? saved.sceneId : 'title');
         },

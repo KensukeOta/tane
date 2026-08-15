@@ -16,7 +16,10 @@ export type SoundId =
   | 'school-morning'
   | 'alarm'
   | 'hallway'
-  | 'empty-room';
+  | 'empty-room'
+  | 'city-ambience'
+  | 'apartment-tone'
+  | 'campus-ambience';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();

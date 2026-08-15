@@ -1,0 +1,657 @@
+.chapter6-city-scene,
+.chapter6-campus-scene,
+.chapter6-shop-scene,
+.chapter6-apartment-scene,
+.chapter6-montage-scene,
+.university-year-scene,
+.chapter6-autumn-scene {
+  --chapter6-wall: #c9bfa9;
+  --chapter6-floor: #9b8267;
+  --chapter6-ink: #39362f;
+  --chapter6-cream: #eee6d5;
+}
+
+.chapter6-city-scene,
+.university-year-scene,
+.chapter6-autumn-scene {
+  background: #b9b39e;
+}
+
+.chapter6-city-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #d3cfbd 0 64%, #aa967b 64%);
+}
+
+.city-building,
+.city-shopfront,
+.city-tree,
+.city-road {
+  position: absolute;
+  display: block;
+}
+
+.city-building {
+  bottom: 29%;
+  border: 1px solid rgb(67 62 53 / 18%);
+  background:
+    repeating-linear-gradient(90deg, transparent 0 14%, rgb(83 89 84 / 45%) 14% 22%, transparent 22% 34%),
+    #aaa698;
+}
+
+.city-building--one {
+  right: 7%;
+  width: 39%;
+  height: 47%;
+}
+
+.city-building--two {
+  right: 43%;
+  width: 28%;
+  height: 35%;
+  background-color: #b8ab96;
+}
+
+.city-shopfront {
+  bottom: 27%;
+  left: 4%;
+  width: 27%;
+  height: 23%;
+  border-top: clamp(6px, 1vw, 12px) solid #9c7252;
+  background: #b8aa92;
+}
+
+.city-tree {
+  bottom: 26%;
+  left: 31%;
+  width: clamp(52px, 9vw, 115px);
+  aspect-ratio: 1;
+  border-radius: 46% 54% 48% 52%;
+  background: #929a76;
+}
+
+.city-tree::after {
+  content: '';
+  position: absolute;
+  top: 75%;
+  left: 48%;
+  width: 5%;
+  height: 72%;
+  background: #705f4b;
+}
+
+.city-road {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 27%;
+  background:
+    linear-gradient(90deg, transparent 0 12%, rgb(237 226 199 / 32%) 12% 25%, transparent 25% 39%, rgb(237 226 199 / 32%) 39% 52%, transparent 52%),
+    #897967;
+}
+
+.chapter6-person {
+  position: absolute;
+  z-index: 7;
+  width: clamp(27px, 4vw, 50px);
+  height: clamp(62px, 9.4vw, 118px);
+}
+
+.chapter6-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #3f3d37;
+}
+
+.chapter6-body {
+  position: absolute;
+  top: 31%;
+  left: 17%;
+  width: 66%;
+  height: 68%;
+  border-radius: 34% 34% 10% 10%;
+  background: #5d6156;
+}
+
+.city-protagonist,
+.outside-protagonist {
+  bottom: 22%;
+  left: 13%;
+  transition: left 3600ms linear;
+}
+
+.city-protagonist.is-walking,
+.outside-protagonist.is-walking {
+  left: 43%;
+}
+
+.chapter6-scene-line {
+  position: absolute;
+  z-index: 18;
+  right: 8%;
+  bottom: 7%;
+  left: 8%;
+  margin: 0;
+  padding: clamp(0.72rem, 2vw, 1.2rem);
+  background: rgb(64 55 43 / 58%);
+  color: #f6f0e4;
+  font-size: clamp(0.84rem, 1.75vw, 1.18rem);
+  letter-spacing: 0.1em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 520ms ease;
+}
+
+.chapter6-scene-line.is-visible {
+  opacity: 1;
+}
+
+.chapter6-apartment-scene {
+  background: #b6a991;
+}
+
+.chapter6-apartment {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #cfc6b3 0 73%, #a98c6c 73%);
+}
+
+.apartment-window,
+.apartment-curtain,
+.apartment-bed,
+.apartment-desk,
+.apartment-fridge,
+.apartment-door,
+.apartment-rug {
+  position: absolute;
+  display: block;
+}
+
+.apartment-window {
+  top: 8%;
+  left: 9%;
+  width: 36%;
+  height: 39%;
+  border: clamp(4px, 0.75vw, 9px) solid #8b806e;
+  background: linear-gradient(160deg, #e5ddc5, #b8c6bd);
+  box-shadow: 2vw 2vw 6vw rgb(238 216 164 / 22%);
+}
+
+.apartment-window::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 49%;
+  width: 2px;
+  background: #8b806e;
+}
+
+.apartment-curtain {
+  top: 5%;
+  left: 5%;
+  width: 44%;
+  height: 47%;
+  border-right: clamp(9px, 2vw, 25px) solid rgb(191 155 107 / 38%);
+  border-left: clamp(9px, 2vw, 25px) solid rgb(191 155 107 / 38%);
+  pointer-events: none;
+}
+
+.apartment-bed {
+  bottom: 12%;
+  left: 8%;
+  width: 34%;
+  height: 17%;
+  border: 3px solid #716553;
+  background: #a7a28f;
+  box-shadow: inset 0 1.2rem rgb(225 215 191 / 34%);
+}
+
+.apartment-desk {
+  right: 31%;
+  bottom: 12%;
+  width: 22%;
+  height: 26%;
+  border-top: clamp(5px, 0.8vw, 9px) solid #806a50;
+  background: linear-gradient(90deg, #6e604e 0 7%, transparent 7% 93%, #6e604e 93%);
+}
+
+.apartment-fridge {
+  right: 8%;
+  bottom: 12%;
+  width: 11%;
+  height: 39%;
+  border: 2px solid #827d72;
+  background: linear-gradient(180deg, #bab9af 0 38%, #9f9e95 38% 40%, #b5b3aa 40%);
+}
+
+.apartment-door {
+  top: 10%;
+  right: 20%;
+  width: 13%;
+  height: 61%;
+  border: 2px solid #796e5e;
+  background: #a18464;
+}
+
+.apartment-rug {
+  right: 23%;
+  bottom: 4%;
+  width: 40%;
+  height: 14%;
+  border-radius: 50%;
+  background: rgb(165 119 75 / 34%);
+}
+
+.apartment-protagonist,
+.free-time-protagonist {
+  bottom: 14%;
+  left: 51%;
+}
+
+.free-time-prompt,
+.free-action-prompt {
+  position: absolute;
+  z-index: 18;
+  top: 9%;
+  left: 50%;
+  max-width: 72%;
+  margin: 0;
+  padding: 0.55rem 0.9rem;
+  background: rgb(95 75 52 / 42%);
+  color: #f7f0e2;
+  font-size: clamp(0.8rem, 1.65vw, 1.08rem);
+  letter-spacing: 0.1em;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.free-time-progress {
+  position: absolute;
+  z-index: 18;
+  top: 7%;
+  left: 6%;
+  margin: 0;
+  color: rgb(73 63 50 / 65%);
+  font-size: clamp(0.65rem, 1.2vw, 0.84rem);
+  letter-spacing: 0.13em;
+}
+
+.free-time-choice-host,
+.free-action-choice-host {
+  position: absolute;
+  z-index: 22;
+  right: 6%;
+  bottom: 6%;
+  width: min(29%, 300px);
+  min-width: 190px;
+}
+
+.free-time-choice-host .choice-menu,
+.free-action-choice-host .choice-menu {
+  padding: 0.5rem;
+  background: rgb(63 52 40 / 68%);
+}
+
+.free-time-choice-host .choice-button,
+.free-action-choice-host .choice-button {
+  color: #f5eee1;
+}
+
+.chapter6-campus-scene {
+  background: #b7b396;
+}
+
+.chapter6-campus {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #d2cfba 0 64%, #8f9d76 64%);
+}
+
+.campus-building {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 65%;
+  height: 52%;
+  border: 1px solid rgb(64 60 53 / 20%);
+  background: #b5ad9c;
+}
+
+.campus-windows {
+  position: absolute;
+  top: 18%;
+  right: 13%;
+  width: 55%;
+  height: 28%;
+  background: repeating-linear-gradient(90deg, #75817c 0 8%, transparent 8% 14%);
+  opacity: 0.6;
+}
+
+.campus-lawn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 36%;
+  background: #87936f;
+}
+
+.campus-path {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  width: 36%;
+  height: 39%;
+  background: #b3a389;
+  clip-path: polygon(41% 0, 59% 0, 100% 100%, 0 100%);
+}
+
+.campus-protagonist {
+  bottom: 17%;
+  left: 14%;
+  transition: left 3000ms linear;
+}
+
+.campus-protagonist.is-walking {
+  left: 40%;
+}
+
+.chapter6-student-group {
+  position: absolute;
+  z-index: 7;
+  right: 12%;
+  bottom: 17%;
+  display: flex;
+  align-items: end;
+  gap: clamp(0.45rem, 1.4vw, 1rem);
+}
+
+.chapter6-student-group .chapter6-person {
+  position: relative;
+  flex: 0 0 clamp(22px, 3.2vw, 40px);
+  height: clamp(52px, 7.4vw, 94px);
+}
+
+.chapter6-student-group .chapter6-person:nth-child(even) {
+  transform: translateY(-7%);
+}
+
+.chapter6-shop-scene {
+  background: #afa58d;
+}
+
+.chapter6-shop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #c7bda7 0 72%, #95816a 72%);
+}
+
+.shop-shelf {
+  position: absolute;
+  top: 17%;
+  width: 27%;
+  height: 48%;
+  border: 5px solid #7b6851;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 27%, #7b6851 27% 30%),
+    repeating-linear-gradient(90deg, #b9865c 0 12%, #9c8468 12% 25%);
+  opacity: 0.78;
+}
+
+.shop-shelf--one { left: 9%; }
+.shop-shelf--two { left: 41%; }
+
+.shop-basket {
+  position: absolute;
+  right: 15%;
+  bottom: 17%;
+  width: 12%;
+  height: 10%;
+  border: 3px solid #765d43;
+  transform: skew(-5deg);
+}
+
+.shop-window {
+  position: absolute;
+  top: 9%;
+  right: 8%;
+  width: 22%;
+  height: 38%;
+  border: 5px solid #8c7b67;
+  background: #c9cec2;
+}
+
+.shop-protagonist {
+  right: 25%;
+  bottom: 18%;
+}
+
+.free-action-prompt.is-result {
+  top: auto;
+  right: 8%;
+  bottom: 8%;
+  left: 8%;
+  max-width: none;
+  transform: none;
+}
+
+.room-action-protagonist {
+  bottom: 14%;
+  left: 42%;
+}
+
+.apartment-night-scene {
+  background: #5f5b52;
+}
+
+.chapter6-apartment.is-night {
+  background: linear-gradient(180deg, #79786f 0 73%, #6c5b4b 73%);
+}
+
+.chapter6-apartment.is-night .apartment-window {
+  background: linear-gradient(160deg, #444b52, #6f716c);
+  box-shadow: none;
+}
+
+.night-protagonist {
+  bottom: 14%;
+  left: 49%;
+}
+
+.room-lamp-glow {
+  position: absolute;
+  z-index: 5;
+  top: 38%;
+  left: 42%;
+  width: 34%;
+  height: 42%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(239 194 125 / 28%), transparent 68%);
+  pointer-events: none;
+}
+
+.chapter6-montage-scene {
+  background: #b9ad96;
+}
+
+.chapter6-montage-image {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, #d2c8b3, #a58e70);
+}
+
+.montage-campus .chapter6-montage-image,
+.montage-campus-later .chapter6-montage-image {
+  background:
+    linear-gradient(90deg, transparent 0 17%, rgb(95 103 91 / 25%) 17% 21%, transparent 21% 39%, rgb(95 103 91 / 25%) 39% 43%, transparent 43%),
+    linear-gradient(180deg, #cbc8b4 0 66%, #899674 66%);
+}
+
+.montage-city .chapter6-montage-image,
+.montage-shopping .chapter6-montage-image {
+  background:
+    repeating-linear-gradient(90deg, #aaa18f 0 18%, #817d73 18% 23%, #b4a68f 23% 39%),
+    #a99c87;
+}
+
+.montage-room .chapter6-montage-image {
+  background: linear-gradient(180deg, #cec4b0 0 72%, #a68b6d 72%);
+}
+
+.montage-night .chapter6-montage-image,
+.montage-night-later .chapter6-montage-image {
+  background: radial-gradient(circle at 55% 55%, rgb(231 184 115 / 19%), #615d55 58%);
+}
+
+.chapter6-montage-label {
+  position: absolute;
+  z-index: 7;
+  top: 8%;
+  left: 7%;
+  margin: 0;
+  color: rgb(54 49 42 / 68%);
+  font-size: clamp(0.68rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.14em;
+}
+
+.montage-night .chapter6-montage-label,
+.montage-night-later .chapter6-montage-label {
+  color: rgb(239 231 215 / 65%);
+}
+
+.chapter6-montage-text {
+  position: absolute;
+  z-index: 8;
+  right: 8%;
+  bottom: 9%;
+  margin: 0;
+  color: #f3ede1;
+  font-size: clamp(0.9rem, 2vw, 1.35rem);
+  letter-spacing: 0.13em;
+}
+
+.chapter6-apartment.is-evening {
+  background: linear-gradient(180deg, #b4a48e 0 73%, #96785f 73%);
+}
+
+.chapter6-apartment.is-evening .apartment-window {
+  background: linear-gradient(160deg, #d1a879, #90988d);
+  box-shadow: 2vw 2vw 7vw rgb(218 149 80 / 20%);
+}
+
+.happiest-time-protagonist {
+  bottom: 14%;
+  left: 49%;
+}
+
+.happiest-time-line {
+  background: transparent;
+  color: #443c31;
+  font-size: clamp(1rem, 2.25vw, 1.55rem);
+}
+
+.university-year-scene {
+  filter: saturate(0.88);
+}
+
+.year-spring .chapter6-city-background {
+  background: linear-gradient(180deg, #d6d0bc 0 64%, #aa967b 64%);
+}
+
+.year-summer .chapter6-city-background {
+  background: linear-gradient(180deg, #c9cdb8 0 64%, #9a9474 64%);
+}
+
+.year-early-autumn .chapter6-city-background,
+.chapter6-autumn-scene .chapter6-city-background {
+  background: linear-gradient(180deg, #c8bca4 0 64%, #9d8065 64%);
+}
+
+.year-early-autumn .city-tree,
+.chapter6-autumn-scene .city-tree {
+  background: #9d885d;
+}
+
+.university-year-label {
+  position: absolute;
+  z-index: 12;
+  top: 15%;
+  left: 50%;
+  margin: 0;
+  padding: 0.65rem 1rem;
+  background: rgb(79 65 48 / 35%);
+  color: #f5eee2;
+  font-size: clamp(1rem, 2.4vw, 1.65rem);
+  letter-spacing: 0.16em;
+  transform: translateX(-50%);
+}
+
+.year-protagonist,
+.autumn-protagonist {
+  bottom: 22%;
+  left: 43%;
+}
+
+.chapter6-autumn-scene {
+  filter: saturate(0.82);
+}
+
+.final-chapter-connection-scene {
+  background: #28231d;
+}
+
+.chapter6-cinematic-line {
+  color: #eee6d8;
+}
+
+.final-chapter-title-scene,
+.final-chapter-placeholder-scene {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 46%, rgb(170 120 65 / 13%), #1f1a15 58%);
+}
+
+.final-chapter-title-scene .chapter-card h1,
+.final-chapter-placeholder-scene .chapter-card h1 {
+  font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+}
+
+@media (max-width: 620px) {
+  .city-building--one { right: 2%; width: 44%; }
+  .city-building--two { right: 43%; width: 31%; }
+  .apartment-window { width: 39%; }
+  .apartment-door { right: 18%; }
+  .apartment-fridge { right: 4%; width: 13%; }
+  .free-time-choice-host,
+  .free-action-choice-host { right: 3%; width: 43%; min-width: 160px; }
+  .chapter6-student-group { right: 4%; gap: 0.2rem; }
+  .chapter6-student-group .chapter6-person:nth-child(n + 4) { display: none; }
+  .free-time-prompt,
+  .free-action-prompt { max-width: 88%; }
+}
+
+@media (max-height: 470px) {
+  .free-time-choice-host,
+  .free-action-choice-host {
+    bottom: 3%;
+    transform: scale(0.86);
+    transform-origin: right bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .city-protagonist,
+  .outside-protagonist,
+  .campus-protagonist,
+  .chapter6-scene-line {
+    transition-duration: 0.01ms;
+    transition-delay: 0ms;
+  }
+}

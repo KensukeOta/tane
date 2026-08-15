@@ -7,6 +7,7 @@ import './styles/chapter2.css';
 import './styles/chapter3.css';
 import './styles/chapter4.css';
 import './styles/chapter5.css';
+import './styles/chapter6.css';
 
 const app = document.querySelector<HTMLElement>('#app');
 
