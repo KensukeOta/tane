@@ -8,6 +8,7 @@ import './styles/chapter3.css';
 import './styles/chapter4.css';
 import './styles/chapter5.css';
 import './styles/chapter6.css';
+import './styles/final-chapter.css';
 
 const app = document.querySelector<HTMLElement>('#app');
 

@@ -23,6 +23,48 @@ export class RootSystem {
     this.setStage(5);
   }
 
+  public revealFullRootSystem(parent: HTMLElement): HTMLElement {
+    this.setStage(6);
+    const figure = document.createElement('figure');
+    figure.className = 'final-root-system';
+    figure.setAttribute('role', 'img');
+    figure.setAttribute(
+      'aria-label',
+      '一つの種から、長い時間をかけて広い範囲へ枝分かれした植物の根',
+    );
+
+    const seed = document.createElement('span');
+    seed.className = 'final-root-seed';
+    const network = document.createElement('span');
+    network.className = 'final-root-network';
+    for (let index = 1; index <= 26; index += 1) {
+      const root = document.createElement('span');
+      root.className = `final-root-line final-root-line--${index}`;
+      network.append(root);
+    }
+
+    const words = document.createElement('span');
+    words.className = 'final-root-words';
+    for (const [index, text] of [
+      'スポーツ',
+      '勉強',
+      '友達',
+      '弟 ＞ ぼく',
+      'あの人 ＞ ぼく',
+      'ぼく ＜',
+    ].entries()) {
+      const word = document.createElement('span');
+      word.className = `final-root-word final-root-word--${index + 1}`;
+      word.textContent = text;
+      words.append(word);
+    }
+
+    figure.append(seed, network, words);
+    parent.append(figure);
+    requestAnimationFrame(() => figure.classList.add('is-revealed'));
+    return figure;
+  }
+
   public setStage(stage: number): void {
     this.getState().rootStage = Math.max(stage, this.getState().rootStage);
   }

@@ -9,7 +9,8 @@ import { Chapter3Scene } from './scenes/Chapter3Scene';
 import { Chapter4Scene } from './scenes/Chapter4Scene';
 import { Chapter5Scene } from './scenes/Chapter5Scene';
 import { Chapter6Scene } from './scenes/Chapter6Scene';
-import { FinalChapterPlaceholderScene } from './scenes/FinalChapterPlaceholderScene';
+import { EndingScene } from './scenes/EndingScene';
+import { FinalChapterScene } from './scenes/FinalChapterScene';
 import { PrologueScene } from './scenes/PrologueScene';
 import { TitleScene } from './scenes/TitleScene';
 import { createInitialState, type GameState, type SceneContext } from './types';
@@ -65,8 +66,9 @@ export class Game {
     );
     this.sceneManager.register(
       'final-chapter-start',
-      (sceneContext) => new FinalChapterPlaceholderScene(sceneContext),
+      (sceneContext) => new FinalChapterScene(sceneContext),
     );
+    this.sceneManager.register('ending', (sceneContext) => new EndingScene(sceneContext));
   }
 
   public start(): void {

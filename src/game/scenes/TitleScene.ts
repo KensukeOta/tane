@@ -46,6 +46,7 @@ export class TitleScene implements Scene {
             'chapter5-start',
             'chapter6-start',
             'final-chapter-start',
+            'ending',
           ]);
           void this.context.navigate(resumableScenes.has(saved.sceneId) ? saved.sceneId : 'title');
         },

@@ -19,7 +19,8 @@ export type SoundId =
   | 'empty-room'
   | 'city-ambience'
   | 'apartment-tone'
-  | 'campus-ambience';
+  | 'campus-ambience'
+  | 'distant-campus';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();
