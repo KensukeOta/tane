@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:holyland": "tsc && vite build --mode holyland",
     "preview": "vite preview"
   },
   "devDependencies": {
