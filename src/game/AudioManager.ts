@@ -9,7 +9,10 @@ export type SoundId =
   | 'applause'
   | 'tennis-hit'
   | 'tennis-miss'
-  | 'school-murmur';
+  | 'school-murmur'
+  | 'dish'
+  | 'family-table'
+  | 'room-tone';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();

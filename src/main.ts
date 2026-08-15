@@ -5,6 +5,7 @@ import './styles/dialogue.css';
 import './styles/chapter1.css';
 import './styles/chapter2.css';
 import './styles/chapter3.css';
+import './styles/chapter4.css';
 
 const app = document.querySelector<HTMLElement>('#app');
 

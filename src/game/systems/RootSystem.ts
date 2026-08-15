@@ -15,6 +15,10 @@ export class RootSystem {
     this.setStage(3);
   }
 
+  public growMultipleBranches(): void {
+    this.setStage(4);
+  }
+
   public setStage(stage: number): void {
     this.getState().rootStage = Math.max(stage, this.getState().rootStage);
   }
@@ -33,6 +37,13 @@ export class RootSystem {
         const branch = document.createElement('span');
         branch.className = 'root-branch';
         root.append(branch);
+      }
+      if (stage >= 4) {
+        for (let index = 0; index < 3; index += 1) {
+          const branch = document.createElement('span');
+          branch.className = `root-branch root-branch--${index + 2}`;
+          root.append(branch);
+        }
       }
       requestAnimationFrame(() => root.classList.add('is-growing'));
     }

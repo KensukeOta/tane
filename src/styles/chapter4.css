@@ -1,0 +1,779 @@
+.coming-home-scene {
+  background: linear-gradient(180deg, #75665b 0 38%, #4a4640 38% 82%, #353532 82%);
+  filter: saturate(0.68);
+}
+
+.home-entrance {
+  position: absolute;
+  inset: 0;
+}
+
+.entrance-door {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 26%;
+  height: 71%;
+  border: clamp(4px, 0.7vw, 9px) solid #393733;
+  background: linear-gradient(90deg, #555048, #47443e);
+}
+
+.entrance-door::after {
+  content: '';
+  position: absolute;
+  top: 49%;
+  left: 12%;
+  width: clamp(5px, 0.8vw, 10px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #9b8a68;
+}
+
+.entrance-light {
+  position: absolute;
+  top: 5%;
+  left: 17%;
+  width: 32%;
+  height: 64%;
+  background: linear-gradient(180deg, rgb(198 165 112 / 18%), transparent 75%);
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+}
+
+.family-presence {
+  position: absolute;
+  top: 25%;
+  right: 43%;
+  color: rgb(230 221 205 / 43%);
+  font-size: clamp(0.62rem, 1.2vw, 0.84rem);
+  letter-spacing: 0.12em;
+}
+
+.chapter4-person {
+  position: absolute;
+  z-index: 6;
+  width: clamp(29px, 4.2vw, 54px);
+  height: clamp(65px, 9.5vw, 122px);
+}
+
+.chapter4-head {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #2d2c29;
+}
+
+.chapter4-body {
+  position: absolute;
+  top: 32%;
+  left: 17%;
+  width: 66%;
+  height: 66%;
+  border-radius: 34% 34% 10% 10%;
+  background: #41413d;
+}
+
+.homecoming-protagonist {
+  bottom: 12%;
+  left: 7%;
+  transition: left 2100ms ease-in-out;
+}
+
+.homecoming-protagonist.is-entering {
+  left: 48%;
+}
+
+.homecoming-line {
+  position: absolute;
+  z-index: 9;
+  right: 8%;
+  bottom: 7%;
+  left: 8%;
+  margin: 0;
+  color: #e9e4da;
+  font-size: clamp(0.78rem, 1.6vw, 1.08rem);
+  letter-spacing: 0.09em;
+  text-align: center;
+}
+
+.family-dinner-scene {
+  background: linear-gradient(180deg, #6b6258 0 63%, #423e39 63%);
+  filter: saturate(0.68);
+}
+
+.dinner-window {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 25%;
+  height: 31%;
+  border: 5px solid #3e3b37;
+  background: linear-gradient(180deg, #4d5050, #292e30);
+}
+
+.dinner-window::after {
+  content: '';
+  position: absolute;
+  inset: 0 50% 0 auto;
+  width: 3px;
+  background: #3e3b37;
+}
+
+.dinner-clock {
+  position: absolute;
+  top: 8%;
+  right: 9%;
+  width: clamp(27px, 4vw, 52px);
+  aspect-ratio: 1;
+  border: 2px solid #81796b;
+  border-radius: 50%;
+  background: #b4ab98;
+  opacity: 0.62;
+}
+
+.dinner-clock::before,
+.dinner-clock::after {
+  content: '';
+  position: absolute;
+  top: 49%;
+  left: 49%;
+  width: 2px;
+  background: #48443e;
+  transform-origin: bottom;
+}
+
+.dinner-clock::before {
+  height: 29%;
+  transform: translate(-50%, -100%) rotate(14deg);
+}
+
+.dinner-clock::after {
+  height: 37%;
+  transform: translate(-50%, -100%) rotate(126deg);
+}
+
+.family-table {
+  position: absolute;
+  z-index: 4;
+  top: 43%;
+  left: 50%;
+  width: 57%;
+  height: 32%;
+  border: clamp(5px, 0.75vw, 9px) solid #665441;
+  border-radius: 48%;
+  background: #725e48;
+  box-shadow: 0 2.3vw 0 -1.5vw #493e34;
+  transform: translateX(-50%);
+}
+
+.family-dish {
+  position: absolute;
+  width: clamp(25px, 4.7vw, 60px);
+  aspect-ratio: 1.35;
+  border: 2px solid #b0a48e;
+  border-radius: 50%;
+  background: #8a795e;
+}
+
+.dish-a {
+  top: 16%;
+  left: 20%;
+}
+
+.dish-b {
+  top: 47%;
+  left: 45%;
+}
+
+.dish-c {
+  top: 13%;
+  right: 17%;
+}
+
+.family-seat {
+  z-index: 5;
+}
+
+.family-seat--self {
+  bottom: 4%;
+  left: 31%;
+}
+
+.family-seat--sibling {
+  right: 30%;
+  bottom: 4%;
+}
+
+.family-seat--sibling .chapter4-body {
+  background: #4e4b41;
+}
+
+.family-seat--adult-a {
+  top: 19%;
+  left: 33%;
+  transform: scale(0.9);
+}
+
+.family-seat--adult-b {
+  top: 19%;
+  right: 32%;
+  transform: scale(0.9);
+}
+
+.family-dinner-day-2 {
+  background: linear-gradient(180deg, #625f58 0 63%, #3e3e3a 63%);
+}
+
+.family-dinner-day-2 .dinner-window {
+  background: linear-gradient(180deg, #3f4648, #252a2d);
+}
+
+.family-dinner-day-2 .dinner-clock::before {
+  transform: translate(-50%, -100%) rotate(38deg);
+}
+
+.family-dinner-day-2 .dish-a {
+  border-radius: 12%;
+  background: #746a59;
+}
+
+.family-dinner-day-2 .family-seat--self {
+  transform: rotate(3deg) translateY(3%);
+}
+
+.family-dinner-day-3 {
+  background: linear-gradient(180deg, #595753 0 63%, #393936 63%);
+  filter: saturate(0.55) brightness(0.92);
+}
+
+.family-dinner-day-3 .dinner-window {
+  background: #252a2c;
+}
+
+.family-dinner-day-3 .dinner-clock::before {
+  transform: translate(-50%, -100%) rotate(65deg);
+}
+
+.family-dinner-day-3 .dish-b {
+  width: clamp(32px, 6vw, 75px);
+  background: #655a4c;
+}
+
+.family-dinner-day-3 .family-seat--self {
+  filter: brightness(0.75);
+  transform: translateY(6%);
+}
+
+.family-dinner-caption {
+  position: absolute;
+  z-index: 18;
+  right: 7%;
+  bottom: 6%;
+  left: 7%;
+  min-height: 2.8rem;
+  margin: 0;
+  padding: 0.65rem 1rem;
+  background: rgb(24 24 23 / 77%);
+  color: #ece7dc;
+  font-size: clamp(0.72rem, 1.5vw, 1rem);
+  line-height: 1.65;
+  letter-spacing: 0.065em;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 320ms ease;
+}
+
+.family-dinner-caption.is-visible {
+  opacity: 1;
+}
+
+.family-comparison {
+  top: 5%;
+  right: 4%;
+  min-width: clamp(150px, 21vw, 270px);
+  background: rgb(20 19 18 / 76%);
+}
+
+.family-comparison.is-anticipated {
+  opacity: 0.2;
+}
+
+.dinner-interaction {
+  position: absolute;
+  z-index: 20;
+  right: 6%;
+  bottom: 15%;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.dinner-plate {
+  --meal-left: 1;
+  position: relative;
+  width: clamp(42px, 6vw, 78px);
+  aspect-ratio: 1.35;
+  overflow: hidden;
+  border: 2px solid #b7ad9a;
+  border-radius: 50%;
+  background: #d0c7b5;
+  opacity: 0.88;
+}
+
+.dinner-plate::after {
+  content: '';
+  position: absolute;
+  inset: 24% 18%;
+  border-radius: 50%;
+  background: #79654d;
+  transform: scale(var(--meal-left));
+  transition: transform 350ms ease;
+}
+
+.dinner-plate.is-eating {
+  transform: translateY(1px);
+}
+
+.dinner-status {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.35rem);
+  color: rgb(232 225 211 / 58%);
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.55rem, 1vw, 0.7rem);
+}
+
+.eat-button {
+  min-width: clamp(82px, 10vw, 125px);
+  min-height: 2.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid #857c6e;
+  background: rgb(30 29 27 / 83%);
+  color: #eee8dc;
+  font-size: clamp(0.72rem, 1.4vw, 0.95rem);
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.eat-button:hover,
+.eat-button:focus-visible {
+  background: rgb(53 49 44 / 88%);
+}
+
+.eat-button:disabled {
+  color: #918a7e;
+  cursor: default;
+}
+
+.dinner-day-card-scene,
+.second-year-scene {
+  background: #0b0b0a;
+}
+
+.chapter4-cinematic-line {
+  max-width: 84%;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.bedroom-choice-scene,
+.dinner-alone-scene,
+.alone-montage-scene {
+  background: linear-gradient(180deg, #343637 0 67%, #252625 67%);
+}
+
+.chapter4-bedroom {
+  position: absolute;
+  inset: 0;
+}
+
+.bedroom-window {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 24%;
+  height: 30%;
+  border: 5px solid #292a29;
+  background: linear-gradient(160deg, #353e42, #171d20);
+}
+
+.bedroom-bed {
+  position: absolute;
+  right: 8%;
+  bottom: 8%;
+  width: 42%;
+  height: 23%;
+  border-bottom: 7px solid #20211f;
+  background: #3f413e;
+}
+
+.bedroom-shelf {
+  position: absolute;
+  top: 16%;
+  right: 13%;
+  width: 22%;
+  height: 31%;
+  border: 4px solid #292a27;
+  background: repeating-linear-gradient(180deg, transparent 0 30%, #292a27 31% 34%);
+}
+
+.bedroom-door {
+  position: absolute;
+  top: 11%;
+  left: 42%;
+  width: 17%;
+  height: 61%;
+  border: 5px solid #272825;
+  background: #3f3d38;
+}
+
+.bedroom-protagonist {
+  bottom: 12%;
+  left: 26%;
+  transition: left 1300ms ease, bottom 1300ms ease;
+}
+
+.bedroom-protagonist.is-heading-to-door {
+  bottom: 26%;
+  left: 44%;
+}
+
+.dinner-call {
+  position: absolute;
+  z-index: 10;
+  top: 18%;
+  left: 50%;
+  margin: 0;
+  color: rgb(235 230 219 / 69%);
+  font-size: clamp(0.78rem, 1.6vw, 1.05rem);
+  letter-spacing: 0.08em;
+  transform: translateX(-50%);
+}
+
+.dinner-choice-host {
+  position: absolute;
+  z-index: 14;
+  top: 35%;
+  left: 50%;
+  width: min(38%, 390px);
+  min-width: 230px;
+  transform: translateX(-50%);
+}
+
+.bedroom-comparison {
+  opacity: 0.25;
+}
+
+.dinner-alone-scene {
+  background: linear-gradient(180deg, #393c3c 0 67%, #292a29 67%);
+  filter: saturate(0.62);
+}
+
+.small-dinner-desk,
+.montage-small-desk {
+  position: absolute;
+  z-index: 4;
+  bottom: 11%;
+  left: 31%;
+  width: 29%;
+  height: 23%;
+  border-top: 6px solid #595149;
+  background: linear-gradient(90deg, transparent 7%, #403b36 7% 12%, transparent 12% 88%, #403b36 88% 93%, transparent 93%);
+}
+
+.alone-protagonist {
+  bottom: 25%;
+  left: 37%;
+  filter: brightness(0.82);
+}
+
+.dinner-interaction--alone {
+  right: auto;
+  bottom: 8%;
+  left: 55%;
+}
+
+.dinner-interaction--alone .dinner-status {
+  color: rgb(235 232 223 / 48%);
+}
+
+.alone-dinner-line {
+  position: absolute;
+  z-index: 16;
+  top: 27%;
+  right: 10%;
+  margin: 0;
+  color: #e5e3dc;
+  font-size: clamp(0.8rem, 1.7vw, 1.12rem);
+  letter-spacing: 0.12em;
+  opacity: 0;
+  transition: opacity 650ms ease;
+}
+
+.alone-dinner-line.is-visible {
+  opacity: 1;
+}
+
+.empty-seat {
+  background: linear-gradient(180deg, #58544e 0 65%, #383734 65%);
+  filter: saturate(0.5);
+}
+
+.empty-family-table {
+  position: absolute;
+  inset: 0;
+}
+
+.empty-table-surface {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: 55%;
+  height: 31%;
+  border-radius: 48%;
+  background: #655543;
+  transform: translateX(-50%);
+}
+
+.empty-chair {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  width: clamp(31px, 5vw, 64px);
+  height: clamp(46px, 7vw, 90px);
+  margin: 25% 7% 0;
+  border: 4px solid #393733;
+  border-bottom: 0;
+}
+
+.empty-chair--self {
+  border-color: rgb(213 204 187 / 33%);
+  opacity: 0.55;
+}
+
+.montage-alone-protagonist {
+  bottom: 25%;
+  left: 35%;
+  opacity: 0.78;
+}
+
+.montage-small-desk {
+  left: 29%;
+}
+
+.another-day {
+  filter: brightness(0.92) saturate(0.55);
+}
+
+.later-day {
+  filter: brightness(0.86) saturate(0.48);
+}
+
+.alone-montage-line {
+  position: absolute;
+  z-index: 12;
+  right: 8%;
+  bottom: 7%;
+  left: 8%;
+  margin: 0;
+  color: #e7e3da;
+  font-size: clamp(0.78rem, 1.6vw, 1.08rem);
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.chapter4-root-scene {
+  background: #15110e;
+}
+
+.chapter4-soil-field {
+  inset: 0;
+  border: 0;
+}
+
+.root-stage-4 .first-root {
+  height: clamp(115px, 25vh, 195px);
+  transition-duration: 3400ms;
+}
+
+.root-stage-4 .root-branch {
+  height: clamp(30px, 6vh, 48px);
+}
+
+.root-branch--2 {
+  top: 28%;
+  height: clamp(25px, 5vh, 42px) !important;
+  transform: rotate(-57deg) scaleY(0);
+  transition-delay: 1000ms;
+}
+
+.root-branch--3 {
+  top: 47%;
+  height: clamp(34px, 7vh, 56px) !important;
+  transform: rotate(69deg) scaleY(0);
+  transition-delay: 1550ms;
+}
+
+.root-branch--4 {
+  top: 73%;
+  height: clamp(22px, 4.5vh, 38px) !important;
+  transform: rotate(-48deg) scaleY(0);
+  transition-delay: 2050ms;
+}
+
+.root-stage-4 .first-root.is-growing .root-branch--2 {
+  transform: rotate(-57deg) scaleY(1);
+}
+
+.root-stage-4 .first-root.is-growing .root-branch--3 {
+  transform: rotate(69deg) scaleY(1);
+}
+
+.root-stage-4 .first-root.is-growing .root-branch--4 {
+  transform: rotate(-48deg) scaleY(1);
+}
+
+.sinking-comparison-words {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sinking-comparison-words span {
+  position: absolute;
+  top: -8%;
+  color: rgb(207 191 163 / 12%);
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  letter-spacing: 0.12em;
+  transition: top 4200ms ease-in, opacity 4200ms ease-in;
+}
+
+.sinking-comparison-words span:nth-child(1) {
+  left: 28%;
+}
+
+.sinking-comparison-words span:nth-child(2) {
+  left: 50%;
+  transition-delay: 350ms;
+}
+
+.sinking-comparison-words span:nth-child(3) {
+  left: 69%;
+  transition-delay: 700ms;
+}
+
+.sinking-comparison-words.is-sinking span {
+  top: 49%;
+  opacity: 0.35;
+}
+
+.high-school-intro-scene,
+.chapter5-title-scene {
+  background: #0a0a09;
+}
+
+.high-school-release-scene {
+  display: grid;
+  place-items: center;
+  background: #151512;
+  transition: background-color 1800ms ease;
+}
+
+.high-school-background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 42%, rgb(177 166 133 / 5%), transparent 44%);
+  transition: background-color 1800ms ease, opacity 1800ms ease;
+}
+
+.high-school-release-scene.is-released {
+  background: #272720;
+}
+
+.high-school-release-scene.is-released .high-school-background {
+  background: radial-gradient(circle at 50% 42%, rgb(208 193 151 / 15%), transparent 48%);
+}
+
+.high-school-comparison {
+  top: 12%;
+  opacity: 0.88;
+}
+
+.high-school-comparison .comparison-hud-row {
+  overflow: hidden;
+  max-height: 4rem;
+  opacity: 1;
+  transition: opacity 900ms ease, max-height 900ms ease, padding 900ms ease;
+}
+
+.high-school-comparison .comparison-hud-row.is-clearing {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.high-school-line {
+  position: relative;
+  z-index: 8;
+  margin: 0;
+  color: #eee9dd;
+  font-size: clamp(0.9rem, 2vw, 1.35rem);
+  letter-spacing: 0.12em;
+  opacity: 0;
+  transition: opacity 650ms ease;
+}
+
+.high-school-line.is-visible {
+  opacity: 1;
+}
+
+.chapter5-title-scene,
+.chapter5-placeholder-scene {
+  display: grid;
+  place-items: center;
+}
+
+.chapter5-title-scene .chapter-card h1,
+.chapter5-placeholder-scene .chapter-card h1 {
+  font-size: clamp(1.45rem, 3.6vw, 2.7rem);
+}
+
+@media (max-width: 560px) {
+  .family-table {
+    width: 66%;
+  }
+
+  .family-seat--self {
+    left: 23%;
+  }
+
+  .family-seat--sibling {
+    right: 22%;
+  }
+
+  .dinner-interaction {
+    right: 3%;
+    transform: scale(0.9);
+    transform-origin: right bottom;
+  }
+
+  .dinner-interaction--alone {
+    right: auto;
+    left: 49%;
+    transform-origin: left bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root-stage-4 .first-root,
+  .root-stage-4 .root-branch,
+  .sinking-comparison-words span,
+  .high-school-comparison .comparison-hud-row {
+    transition-duration: 0.01ms;
+    transition-delay: 0ms;
+  }
+}

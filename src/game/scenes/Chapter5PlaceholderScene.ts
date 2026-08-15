@@ -2,18 +2,18 @@ import type { Scene, SceneContext } from '../types';
 import { ChoiceMenu } from '../ui/ChoiceMenu';
 import { createChapterCard, createScene } from './sceneUtils';
 
-export class Chapter4PlaceholderScene implements Scene {
+export class Chapter5PlaceholderScene implements Scene {
   private menu: ChoiceMenu | null = null;
 
   public constructor(private readonly context: SceneContext) {}
 
   public enter(): void {
-    const scene = createScene('chapter-placeholder-scene chapter4-placeholder-scene');
-    const content = createChapterCard('CHAPTER 4', '食卓');
+    const scene = createScene('chapter-placeholder-scene chapter5-placeholder-scene');
+    const content = createChapterCard('CHAPTER 5', '逃げたはずなのに');
     content.classList.add('is-visible');
     const note = document.createElement('p');
     note.className = 'development-note';
-    note.textContent = 'CHAPTER 4は次の実装フェーズで追加されます。';
+    note.textContent = 'CHAPTER 5は次の実装フェーズで追加されます。';
     content.append(note);
     scene.append(content);
     this.context.root.append(scene);

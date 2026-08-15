@@ -88,6 +88,11 @@ export class ComparisonSystem {
     this.display = null;
   }
 
+  public clearComparison(): void {
+    this.setStage(5);
+    this.hideComparison();
+  }
+
   public destroy(): void {
     this.hideComparison();
   }
