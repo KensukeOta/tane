@@ -12,7 +12,11 @@ export type SoundId =
   | 'school-murmur'
   | 'dish'
   | 'family-table'
-  | 'room-tone';
+  | 'room-tone'
+  | 'school-morning'
+  | 'alarm'
+  | 'hallway'
+  | 'empty-room';
 
 export class AudioManager {
   private readonly sources = new Map<SoundId, string>();

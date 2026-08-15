@@ -19,6 +19,10 @@ export class RootSystem {
     this.setStage(4);
   }
 
+  public growWithoutExternalStimulus(): void {
+    this.setStage(5);
+  }
+
   public setStage(stage: number): void {
     this.getState().rootStage = Math.max(stage, this.getState().rootStage);
   }
@@ -28,7 +32,16 @@ export class RootSystem {
     seed.className = 'root-seed';
     seed.classList.add(`root-stage-${stage}`);
     seed.setAttribute('role', 'img');
-    seed.setAttribute('aria-label', stage >= 2 ? '一本の細い根を伸ばす種' : '土の中の種');
+    seed.setAttribute(
+      'aria-label',
+      stage >= 5
+        ? '外から何も落ちてこない中で、自ら枝を伸ばす根'
+        : stage >= 4
+          ? '複数の細い枝を伸ばす根'
+          : stage >= 2
+            ? '一本の細い根を伸ばす種'
+            : '土の中の種',
+    );
     if (stage >= 2) {
       const root = document.createElement('span');
       root.className = 'first-root';
@@ -42,6 +55,13 @@ export class RootSystem {
         for (let index = 0; index < 3; index += 1) {
           const branch = document.createElement('span');
           branch.className = `root-branch root-branch--${index + 2}`;
+          root.append(branch);
+        }
+      }
+      if (stage >= 5) {
+        for (let index = 0; index < 3; index += 1) {
+          const branch = document.createElement('span');
+          branch.className = `root-branch root-branch--${index + 5}`;
           root.append(branch);
         }
       }

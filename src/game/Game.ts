@@ -7,7 +7,8 @@ import { Chapter1Scene } from './scenes/Chapter1Scene';
 import { Chapter2Scene } from './scenes/Chapter2Scene';
 import { Chapter3Scene } from './scenes/Chapter3Scene';
 import { Chapter4Scene } from './scenes/Chapter4Scene';
-import { Chapter5PlaceholderScene } from './scenes/Chapter5PlaceholderScene';
+import { Chapter5Scene } from './scenes/Chapter5Scene';
+import { Chapter6PlaceholderScene } from './scenes/Chapter6PlaceholderScene';
 import { ContentNoteScene } from './scenes/ContentNoteScene';
 import { PrologueScene } from './scenes/PrologueScene';
 import { TitleScene } from './scenes/TitleScene';
@@ -57,7 +58,11 @@ export class Game {
     );
     this.sceneManager.register(
       'chapter5-start',
-      (sceneContext) => new Chapter5PlaceholderScene(sceneContext),
+      (sceneContext) => new Chapter5Scene(sceneContext),
+    );
+    this.sceneManager.register(
+      'chapter6-start',
+      (sceneContext) => new Chapter6PlaceholderScene(sceneContext),
     );
   }
 
